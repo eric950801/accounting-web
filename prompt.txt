@@ -1,0 +1,14 @@
+（Vibe Coding Prompt — 中文）
+請幫我用 Vibe Coding 的方式生成一個「簡易記帳網頁」web application，要求如下：
+1. 使用純前端技術（HTML/CSS/JavaScript），可直接使用 localStorage 儲存紀錄（不需後端）。
+2. 功能：
+   - 新增記帳項目：日期、類別（可選預設項目）、金額、類型（收入/支出）、說明。
+   - 顯示明細表格，並可刪除單筆項目。
+   - 顯示總收入、總支出與結餘。
+   - 匯出 CSV 檔案。
+   - 清除所有資料的按鈕（需二次確認）。
+3. UI 要乾淨、回應式，適合手機與桌面。
+4. 程式碼需有註解，結構清晰，方便未來擴充。
+5. 生成後提供部署說明（如何放到 GitHub Pages 或 Replit）。
+6. 同時輸出一份簡短的報告（包含 Prompt、部署網址範例、Git URL 範例、遇到的問題與解法、vibe coding 的心得）。
+請直接產出完整專案檔案（index.html, style.css, app.js, README 等）。

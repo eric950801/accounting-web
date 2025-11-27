@@ -1,0 +1,26 @@
+作業報告 — 記帳網頁 (Vibe Coding)
+
+1) 程式部署的網址:
+   - 我在此環境無法直接部署線上網址。若你要部署，建議使用 GitHub Pages 或 Replit。
+   - 範例 GitHub Pages URL（當你部署後會是）：https://<your-username>.github.io/<repo-name>/
+
+2) Prompt:
+   - 請參考 prompt.txt（已包含完整的 Vibe Coding prompt，中文）。
+
+3) Git URL:
+   - 範例 (請建立並上傳後替換): https://github.com/<your-username>/vibe-ledger
+
+4) 過程中遇到的問題 & 解決方法:
+   - 問題 A: 使用 Vibe Coding 時，AI 產生的 UI 與交互可能有小錯誤（例如按鈕事件綁定錯誤）。
+     解法：手動檢查並修正事件綁定與 DOM 查詢；加入 try/catch 處理 localStorage 解析錯誤。
+   - 問題 B: 日期格式或數值類型在不同瀏覽器可能出現差異。
+     解法：在寫入前將金額轉為 Number 並用 toFixed(2) 格式化；日期欄位若為空值則使用當天日期。
+   - 問題 C: 部署細節（HTTPS、CSP、相對路徑）。
+     解法：使用相對路徑、靜態檔案、部署到 GitHub Pages 或 Replit 可避免大多數 CORS/CSP 問題。
+   - 問題 D: Vibe Coding 生成的程式碼可讀性不足。
+     解法：重構並加上註解，將資料處理與 DOM 更新邏輯分開。
+
+5) Vibe Coding 的心得:
+   - 優點：能快速從想法轉出可互動的原型（省去大量樣板式 coding），對於作業或原型非常有效率。
+   - 缺點：AI 生成的程式往往需要人工審查（bug、效能、資安），尤其是部署到公開環境前需仔細檢查。
+   - 建議：把 Vibe Coding 當作快速原型工具，並學會閱讀與修正其產出的程式碼；掌握部署與安全基礎仍然重要。
