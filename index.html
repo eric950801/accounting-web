@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>簡易記帳 - Vibe Coding 範例</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>簡易記帳 (Vibe Coding)</h1>
+    <form id="entry-form">
+      <div class="row">
+        <label>日期<input type="date" id="date" required></label>
+        <label>類別
+          <select id="category">
+            <option>餐飲</option>
+            <option>交通</option>
+            <option>生活用品</option>
+            <option>娛樂</option>
+            <option>其他</option>
+          </select>
+        </label>
+      </div>
+      <div class="row">
+        <label>金額<input type="number" id="amount" step="0.01" required></label>
+        <label>類型
+          <select id="type">
+            <option value="expense">支出</option>
+            <option value="income">收入</option>
+          </select>
+        </label>
+      </div>
+      <label>說明<input type="text" id="note" placeholder="例如：買早餐"></label>
+      <div class="actions">
+        <button type="submit">新增</button>
+        <button type="button" id="clear">清除所有</button>
+        <button type="button" id="export">匯出 CSV</button>
+      </div>
+    </form>
+
+    <div class="summary">
+      <div>總收入：<span id="total-income">0.00</span></div>
+      <div>總支出：<span id="total-expense">0.00</span></div>
+      <div>結餘：<span id="balance">0.00</span></div>
+    </div>
+
+    <table id="ledger">
+      <thead>
+        <tr><th>日期</th><th>類別</th><th>類型</th><th>金額</th><th>說明</th><th>操作</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
